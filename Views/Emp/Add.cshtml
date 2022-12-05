@@ -1,0 +1,36 @@
+﻿@model mvc3839_7622.Models.tblemployee
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add</h2>
+@using(Html.BeginForm("Add","Emp",FormMethod.Post))
+            {
+<table>
+    @Html.HiddenFor(x=>x.id)
+    <tr>
+        <td>Name:</td>
+        <td>@Html.TextBoxFor(x => x.name)</td>
+    </tr>
+
+    <tr>
+        <td>Ciyy:</td>
+        <td>@Html.TextBoxFor(x => x.city)</td>
+    </tr>
+
+    <tr>
+        <td>Salary:</td>
+        <td>@Html.TextBoxFor(x => x.salary)</td>
+    </tr>
+
+    <tr>
+        <td>Age:</td>
+        <td>@Html.TextBoxFor(x => x.age)</td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td><input type="submit" id="tblsave" value="@ViewBag.kk" /></td>
+    </tr>
+</table>
+            }

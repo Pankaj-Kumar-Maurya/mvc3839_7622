@@ -1,0 +1,33 @@
+﻿@model IEnumerable<mvc3839_7622.Models.tblemployee>
+@{
+    ViewBag.Title = "Show";
+}
+
+<h2>Show</h2>
+<table border="1">
+    <tr>
+        <td>Employee Id</td>
+        <td>Employee Name</td>
+        <td>Employee City</td>
+        <td>Employee Salary</td>
+        <td>Employee Age</td>
+        <td></td>
+        <td></td>
+        
+    </tr>
+    @foreach(var a in Model)
+            {
+<tr>
+    <td>@a.id</td>
+    <td>@a.name</td>
+    <td>@a.city</td>
+    <td>@a.salary</td>
+    <td>@a.age</td>
+    <td>@Html.ActionLink("Delete", "Del", new { id = a.id })</td>
+    <td>@Html.ActionLink("Edit", "Add", new { id = a.id })</td>
+</tr>
+
+            }
+
+</table>
+
